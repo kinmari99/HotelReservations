@@ -1,0 +1,52 @@
+﻿@model Hotel.Models.Użytkownik
+@{
+    <h1>Czy chcesz się zarejestrować?</h1>
+    <form asp-action="Rejestracja" method="post">
+
+        <div>
+            <label asp-for="Name">Twoje Imię</label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Surname">Twoje Nazwisko</label>
+            <input asp-for="Surname" />
+        </div>
+
+        <div>
+            <label asp-for="Email">Twój Email</label>
+            <input asp-for="Email" />
+        </div>
+
+        <div>
+            <label asp-for="Nickname">Login</label>
+            <input asp-for="Nickname" />
+        </div>
+
+        <div>
+            <label asp-for="Haslo">Hasło</label>
+            <input type="password" asp-for="Haslo" />
+        </div>
+
+        <div>
+            <label asp-for="powtorzHaslo">Powtórz Hasło</label>
+            <input type="password" asp-for="powtorzHaslo" />
+        </div>
+
+
+        <div asp-validation-summary="All"></div>
+
+        <div>
+            <input type="submit" value="Zarejestruj mnie" />
+        </div>
+
+        <div>
+            <input type="reset" value="Wyczyść" />
+
+
+        </div>
+
+    </form>
+
+
+}
+

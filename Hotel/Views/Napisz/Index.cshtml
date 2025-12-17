@@ -1,0 +1,43 @@
+﻿@model Hotel.Models.Napisz
+@{
+    <h1>Czy chcesz wysłać do nas wiadomość?</h1>
+    <form asp-action="Napisz" method="post">
+
+        <div>
+            <label asp-for="Name">Twoje Imię</label>
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="Surname">Twoje Nazwisko</label>
+            <input asp-for="Surname" />
+        </div>
+
+
+        <div>
+            <label asp-for="Email">Twój E-mail</label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Message"></label>
+            <textarea asp-for="Message" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+
+        <div asp-validation-summary="All"></div>
+
+        <div>
+            <input type="submit" value="Wyślij" />
+        </div>
+
+        <div>
+            <input type="reset" value="Wyczyść" />
+
+
+        </div>
+
+    </form>
+
+
+}
+
