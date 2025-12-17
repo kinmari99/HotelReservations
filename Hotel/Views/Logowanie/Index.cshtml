@@ -1,0 +1,32 @@
+﻿@model Hotel.Models.Logowanie
+@{
+    <h1>Czy chcesz się zalogować?</h1>
+    <form asp-action="Logowanie" method="post">
+
+    
+
+        <div>
+            <label asp-for="Nickname">Login</label>
+            <input asp-for="Nickname" />
+        </div>
+
+        <div>
+            <label asp-for="Haslo">Hasło</label>
+            <input type="password" asp-for="Haslo" />
+        </div>
+
+
+        <div asp-validation-summary="All"></div>
+
+        <div>
+            <input type="submit" value="Zaloguj się" />
+        </div>
+
+   
+
+    </form>
+
+
+}
+
+

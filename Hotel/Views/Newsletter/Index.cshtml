@@ -1,0 +1,38 @@
+﻿@model Hotel.Models.Newsletter
+@{
+    <h1>Czy chcesz zapisać się do naszego Newslettera?</h1>
+    <form asp-action="Newsletter" method="post">
+        
+        <div>
+            <label asp-for="Name">Twoje Imię</label>
+            <input asp-for="Name" />
+        </div>
+
+        <div>
+            <label asp-for="Email">Twój Email</label>
+            <input asp-for="Email" />
+        </div>
+
+        <div class="form-group">
+            <input asp-for="IsAccepted" type="checkbox" />
+            <label asp-for="IsAccepted"></label>
+            <span asp-validation-for="IsAccepted" class="text-danger"></span>
+        </div>
+
+        <div asp-validation-summary="All"></div>
+
+        <div>
+            <input type="submit" value="Zapisz mnie" />
+        </div>
+
+        <div>
+            <input type="reset" value="Wyczyść" />
+
+
+        </div>
+
+    </form>
+
+
+}
+
